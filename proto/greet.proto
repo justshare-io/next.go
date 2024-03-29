@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package greet;
+
+message GreetRequest {
+  string name = 1;
+}
+
+message GreetResponse {
+  string greeting = 1;
+}
+
+service GreetService {
+  rpc Greet(GreetRequest) returns (GreetResponse) {}
+
+  // NOTE breadchris add your own methods here
+  // a short protobuf and grpc guide: https://chat.openai.com/share/9eb8a1cb-9c06-44da-938c-9fe28ff2f9e9
+  // in the repo root run: `go generate ./...` to regenerate the files in pkg/gen
+}
