@@ -4,12 +4,11 @@ your site, built now.
 ## Try it out
 ```shell
 # hit the http api server
-go run main.go
+go run github.com/justshare-io/nextgo@latest
 curl --header "Content-Type: application/json" --data '{"name": "Jane"}' http://localhost:8080/greet.GreetService/Greet 
 
 # ui for calling the grpc server, like postman.
-go install github.com/fullstorydev/grpcui/cmd/grpcui@latest
-grpcui -plaintext localhost:8080
+go run github.com/fullstorydev/grpcui/cmd/grpcui@latest -plaintext localhost:8080
 ```
 
 ## Learn
@@ -27,6 +26,12 @@ go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
 go install connectrpc.com/connect/cmd/protoc-gen-connect-go@latest
 
 go generate ./...
+```
+
+### GPRC
+```shell
+go install github.com/fullstorydev/grpcui/cmd/grpcui@latest
+grpcui -plaintext localhost:8080
 ```
 
 ### Dependencies
